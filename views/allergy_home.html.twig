@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <title>Allergy</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Allergy Lister!!!!!</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <form action="/results" method="post">
+                        <label for="allergy-number">Input your allergy number</label>
+                        <input type="number" name="allergy-number">
+                     </form>
+                </div>
+                <div class="col-sm-8">
+                    {% block display %}
+                    <h2>Common Allergies</h2>
+                    <p>
+                        Use the input at the left to tell us your allergy number, and we'll give you a list of everything you are alergic to!
+                    </p>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

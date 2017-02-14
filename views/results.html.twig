@@ -1,0 +1,10 @@
+{% extends "allergy_home.html.twig" %}
+
+{% block display %}
+    <h2>You are allergic to:</h2>
+    <ul>
+        {% for allergy in allergies %}
+        <li> {{ allergy }} </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
